@@ -1,0 +1,80 @@
+<template>
+  <div>
+	<b-row>
+	<b-col align-self="center">
+	    <img src="Security.png" alt="Security">
+		<div v-if="mysec.trafficLight == '1'">
+			<img src="redicon.png" alt="Red Icon">
+		</div>
+		<div v-else-if="mysec.trafficLight == '2'">
+		   <img src="yellowicon.png" alt="Yellow Icon">
+		</div>
+		<div v-else-if="mysec.trafficLight == '3'">
+		  <img src="greenicon.png" alt="Green Icon">
+		</div>
+
+		<H5>Uptime : {{mysec.uptime}} minutes</H5>
+		<h5>Notification Level: {{mysec.level}} </H5>
+		<H5>Last Recv: {{mysec.lastTime}} </H5>
+		<H6>Last event: {{mysec.msg}} </H6>
+		<H6>Click for events details</H6>
+
+	</b-col>
+	</b-row>
+
+<BR>
+
+ </div>
+</template>
+
+
+<script>
+module.exports =  {
+	props: {
+		mysec: {
+		}, 
+	},
+	data() {
+		return {
+
+	}
+},
+	computed: {
+
+		}, // end of computed
+
+	methods: {
+		
+	}, // end of methods 
+
+	mounted: function () {
+  	},
+} // end of exports
+</script>
+
+<style scoped>
+    img{
+        padding-top: 5px;
+		padding-bottom: 15px;
+    }
+    h5 {
+        padding-top: 10px;
+		padding-bottom: 5px;
+        font-family:'Josefin Sans', sans-serif;
+        font-size: 20px;
+		color: #2d3d32;
+		font-kerning: normal;
+		letter-spacing: 1px;
+		line-height: 15px;
+    }
+    h6 {
+        padding-top: 10px;
+		padding-bottom: 5px;
+        font-family:'Josefin Sans', sans-serif;
+        font-size: 20px;
+		color: #2d3d32;
+		font-kerning: normal;
+		letter-spacing: 1px;
+		line-height: 15px;
+    }
+</style>

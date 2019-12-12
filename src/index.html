@@ -1,0 +1,120 @@
+
+<!doctype html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>http-vue-loader/VueJS Example - Node-RED UI Builder</title>
+    <meta name="description" content="Node-RED UI Builder - http-vue-loader/VueJS Example">
+
+    <link rel="icon" href="./images/node-blue.ico">
+
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Josefin+Sans|Quantico|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" media="all">
+    <style>
+	body{
+		background-color: #536058;
+		}  
+	h1 {
+		padding-top: 40px;
+		padding-bottom: 10px;
+        font-family: 'Quantico', sans-serif;
+        font-size: 45px;
+		color: #2d3d32;
+		font-kerning: normal;
+		letter-spacing: 1px;
+		line-height: 50px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="app" v-bind:style="{ backgroundColor: color}">
+
+        <b-container id="app_container">
+
+       <h1>
+       System Monitor 
+       </h1>
+	<P>
+<b-row>	 
+<b-col>
+<b-card header="Racks" border-variant="primary">
+<my-rack v-bind:myracks="racks"> </my-rack>
+</b-card>
+</b-col>
+<b-col>
+<b-card header="Environment" border-variant="primary">	
+<my-env v-bind:myenv="env"> </my-env>
+</b-card>
+</b-col>
+</b-row>
+
+<P>
+<b-row>	 
+<b-col>
+<b-card header="Cooling" border-variant="primary">
+	<my-cool v-bind:mycool="cooling"> </my-cool>
+</b-card>
+</b-col>
+<b-col>
+<b-card header="Power" border-variant="primary">
+	<my-power v-bind:mypower="power"> </my-power>
+</b-card>
+</b-col>
+</b-row>
+
+<P>
+<b-row>	 
+<b-col>
+<b-card header="Mixer" border-variant="primary">
+	<my-mixer v-bind:mymixer="mixer"> </my-mixer>
+</b-card>
+</b-col>
+<b-col>
+<b-card header="Security" border-variant="primary">
+	<my-sec v-bind:mysec="security"> </my-sec>
+</b-card>
+</b-col>
+</b-row>
+
+<P>
+<b-row>	 
+<b-col>
+<b-card header="Connectivity" border-variant="primary">
+	<my-conn v-bind:myconn="conn"> </my-conn>
+</b-card>
+</b-col>
+<b-col>
+<b-card header="Food Computer" border-variant="primary">
+	<my-ipc v-bind:myipc="ipc"> </my-ipc>
+</b-card>
+</b-col>
+</b-row>
+</b-container>
+</div>
+
+
+    <!-- Default scripts -->
+    <!-------------------->
+    
+    <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <!-- Use vue.min.js for production use -->
+    <script src="../uibuilder/vendor/vue/dist/vue.js"></script>
+    <script src="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.js"></script>
+
+    <!-- Loading from CDN -->
+    <!--script src="https://unpkg.com/http-vue-loader"></script -->
+
+    <!-- Loading from npm installed version -->
+    <script src="../uibuilder/vendor/http-vue-loader/src/httpVueLoader.js"></script> 
+
+    <script src="./uibuilderfe.min.js"></script> <!--    //prod version -->
+    <script src="./index.js"></script>
+
+</body></html>

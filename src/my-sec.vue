@@ -9,7 +9,7 @@
 		<div v-else-if="mysec.trafficLight == '2'">
 		   <img src="yellow.png" alt="Yellow Icon">
 		</div>
-		<div v-else-if="mysec.trafficLight == '3'">
+		<div v-else="mysec.trafficLight == '3'">
 		  <img src="green.png" alt="Green Icon">
 		</div>
 

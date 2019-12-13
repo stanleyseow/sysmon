@@ -71,10 +71,10 @@ var app1 = new Vue({
 				vm.env = msg.payload;
        	}
 		if ( msg.payload.system == 'security') {
-                	vm.env = msg.payload;
+                	vm.security = msg.payload;
        	}
 		if ( msg.payload.system == 'mixer') {
-                	vm.env = msg.payload;
+                	vm.mixer = msg.payload;
        	}
 		if ( msg.payload.system == 'conn') {
                 	vm.conn = msg.payload;

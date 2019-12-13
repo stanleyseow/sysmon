@@ -9,7 +9,7 @@
 		<div v-else-if="myenv.trafficLight == '2'">
 		  <img src="yellow.png" alt="Yellow Icon">
 		</div>
-		<div v-else-if="myenv.trafficLight == '3'">
+		<div v-else="myenv.trafficLight == '3'">
 		  <img src="green.png" alt="Green Icon">
 		</div>
 		<H5>Uptime : {{myenv.uptime}} minutes</H5>

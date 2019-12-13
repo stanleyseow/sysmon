@@ -37,14 +37,12 @@ var app1 = new Vue({
 		conn: {}, 
 		ipc: {}, 
     }, // --- End of data --- //
-
     computed: {
     }, // --- End of computed --- //
 
     methods: {
 				
-		},	// --- End of methods --- //	
-		
+	},	// --- End of methods --- //	
     mounted: function(){
         // **REQUIRED** Start uibuilder comms with Node-RED @since v2.0.0-dev3
         

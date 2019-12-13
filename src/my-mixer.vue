@@ -4,13 +4,13 @@
 	<b-col align-self="center">
 	    <img src="Mixer.png" alt="Mixer">
 		<div v-if="mymixer.trafficLight == '1'">
-			<img src="redicon.png" alt="Red Icon">
+			<img src="red.png" alt="Red Icon">
 		</div>
 		<div v-else-if="mymixer.trafficLight == '2'">
-		    <img src="yellowicon.png" alt="Yellow Icon">
+		    <img src="yellow.png" alt="Yellow Icon">
 		</div>
 		<div v-else-if="mymixer.trafficLight == '3'">
-		  <img src="greenicon.png" alt="Green Icon">
+		  <img src="green.png" alt="Green Icon">
 		</div>
 
 		<H5>Uptime : {{mymixer.uptime}} minutes</H5>
@@ -62,7 +62,7 @@ module.exports =  {
 		padding-bottom: 5px;
         font-family:'Josefin Sans', sans-serif;
         font-size: 20px;
-		color: #2d3d32;
+		color: #c6c6c6;
 		font-kerning: normal;
 		letter-spacing: 1px;
 		line-height: 15px;
@@ -72,9 +72,9 @@ module.exports =  {
 		padding-bottom: 5px;
         font-family:'Josefin Sans', sans-serif;
         font-size: 20px;
-		color: #2d3d32;
+		color: #c6c6c6;
 		font-kerning: normal;
 		letter-spacing: 1px;
-		line-height: 15px;
+		line-height: 23px;
     }
 </style>
